@@ -1,9 +1,13 @@
 const repeatString = function(inputString, inputNumber) {
-    let newString = "";
-    for (let i = 0; i < inputNumber; i++){
+    if (inputNumber < 0){
+        return "ERROR";
+    }else{
+        let newString = "";
+        for (let i = 0; i < inputNumber; i++){
         newString += inputString;
+        }
+        return newString;
     }
-    return newString;
 };
 
 // Do not edit below this line
