@@ -6,17 +6,13 @@ const removeFromArray = function(inputArray, ...elementsToRemove) {
 
     outer: for (let i = 0; i < inputArrayLength; i++){
         for (let j = 0; j < elementsToRemoveArrayLength; j++){
-            if (inputArray[i] == elementsToRemoveArray[j]){
+            if (inputArray[i] === elementsToRemoveArray[j]){
                 continue outer;
             }
         }newArray.push(inputArray[i]);
     }
     return newArray;
 }
-
-//to aid in debugging
-//removeFromArray([1, 2, 3, 4], 3, 2);
-//console.log(newArray);
 
 // Do not edit below this line
 module.exports = removeFromArray;
