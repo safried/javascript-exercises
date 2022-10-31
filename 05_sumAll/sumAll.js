@@ -1,9 +1,18 @@
 const sumAll = function(numOne, numTwo) {
     let sum = 0;
-
-    for (let i = 0; i < numTwo; i++){
-        sum += (numOne + i);
+    
+    if (numOne < numTwo){
+        for (let i = 0; i < numTwo; i++){
+            sum += (numOne + i);
+        }
+    }else if (numOne > numTwo){
+        for (let i = 0; i < numOne; i++){
+            sum += (numTwo + i);
+        }
+    }else {
+        sum = numOne;
     }
+    
     return sum;
     
 };
